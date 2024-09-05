@@ -1,0 +1,36 @@
+import pyautogui
+import time
+import keyboard
+
+# Set the power button key code (may vary depending on the system)
+power_button_key = 'power'
+
+# Set the SOS signal message
+sos_message = 'SOS'
+
+# Set the delay between SOS signals (in seconds)
+delay_between_signals = 1
+
+# Set the hold time for the power button (in seconds)
+hold_time = 5
+
+# Initialize a flag to track if the power button is being held
+power_button_held = False
+
+while True:
+    # Check if the power button is being pressed
+    if keyboard.is_pressed(power_button_key):
+        # Start a timer when the power button is first pressed
+        if not power_button_held:
+            start_time = time.time()
+            power_button_held = True
+    else:
+        # Reset the flag when the power button is released
+        power_button_held = False
+
+    # Check if the power button has been held for the required time
+    if power_button_held and time.time() - start_time >= hold_time:
+        # Simulate typing the SOS signal
+        pyautogui.typewrite(sos_message)
+        pyautogui.press('enter')
+        time.sleep(delay_between_signals)
