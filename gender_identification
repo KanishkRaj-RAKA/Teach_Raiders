@@ -1,0 +1,55 @@
+import tensorflow as tf
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+
+# Define the model architecture
+model = tf.keras.models.Sequential([
+    tf.keras.layers.Conv2D(32, (3, 3), activation='relu', input_shape=(224, 224, 3)),
+    tf.keras.layers.MaxPooling2D((2, 2)),
+    tf.keras.layers.Flatten(),
+    tf.keras.layers.Dense(128, activation='relu'),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(2, activation='softmax')
+])
+
+# Compile the model
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+
+# Load the dataset
+train_datagen = ImageDataGenerator(rescale=1./255)
+validation_datagen = ImageDataGenerator(rescale=1./255)
+
+train_generator = train_datagen.flow_from_directory(
+    'path/to/train/directory',
+    target_size=(224, 224),
+    batch_size=32,
+    class_mode='binary'
+)
+
+validation_generator = validation_datagen.flow_from_directory(
+    'path/to/validation/directory',
+    target_size=(224, 224),
+    batch_size=32,
+    class_mode='binary'
+)
+
+# Train the model
+history = model.fit(
+    train_generator,
+    steps_per_epoch=train_generator.samples // 32,
+    epochs=10,
+    validation_data=validation_generator,
+    validation_steps=validation_generator.samples // 32
+)
+
+# Make predictions on the validation set
+predictions = model.predict(validation_generator)
+
+# Convert predictions to class labels
+predicted_classes = tf.argmax(predictions, axis=1)
+
+# Count the number of men and women
+num_men = tf.reduce_sum(tf.cast(predicted_classes == 0, tf.int32))
+num_women = tf.reduce_sum(tf.cast(predicted_classes == 1, tf.int32))
+
+print(f"Number of men: {num_men}")
+print(f"Number of women: {num_women}")
