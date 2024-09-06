@@ -1,7 +1,7 @@
 import cv2
 import tkinter as tk
 from tkinter import filedialog
-
+ 
 # Create a Tkinter window
 window = tk.Tk()
 window.title("Face Detection")

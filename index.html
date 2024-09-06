@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Face Detection and Gender Identification</title>
+  </head>
+  <body>
+    <h1>Face Detection and Gender Identification</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="image" accept="image/*">
+      <button type="submit">Upload Image</button>
+    </form>
+    <div id="output-image"></div>
+
+    <script>
+      fetch('/upload', {
+        method: 'POST',
+        body: new FormData(document.querySelector('form'))
+      })
+      .then(response => response.json())
+      .then(data => {
+        const img = document.createElement('img');
+        img.src = `data:image/png;base64,${data.output_image}`;
+        document.getElementById('output-image').appendChild(img);
+      });
+    </script>
+  </body>
+</html>
