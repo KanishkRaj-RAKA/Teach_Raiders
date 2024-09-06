@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotspots - Women Safety</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 20px;
+            border-radius: 10px;
+            width: 120px;
+            background-image: linear-gradient(to right, #0004ff, #000000);
+            margin-bottom: 50px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .header {
+            background-image: linear-gradient(to right, #0004ff, #ff4500); /* Orange to Red */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white; /* Use white text for better contrast */
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .header p {
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .map-container {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .map-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .map {
+            width: 100%;
+            height: 400px; /* Adjust the height as needed */
+            background-color: #ddd; /* Placeholder background color */
+        }
+
+        .list {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .list-item {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0069d9;
+        }
+        .logOut {
+    color: #fff;
+    background-color: #ff4500; /* Red color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    }
+    .logOut {
+        color: #e03d00; /* Darker red for hover effect */
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Women Safety</h2>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="Facesdetected.html">Faces Detected</a></li>
+                <li><a href="females.html">Females</a></li>
+                <li><a href="male.html">Male</a></li>
+                <li><a href="sneha.html">Sneha</a></li>
+                <li><a href="sos.html">SOS</a></li>
+                <li><a href="alerts.html">Alerts</a></li>
+                <li><a href="map.html">Hotspots</a></li>
+                <li><a href="#" class="logOut">Log Out</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="header">
+                <h1>Danger-Prone Areas in India</h1>
+                <p>Below are the areas identified as high risk for women's safety in India.</p>
+            </div>
+            <div class="map-container">
+                <h2>Map of Danger Zones in India</h2>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7059506.264303636!2d78.562150411126!3d20.59368411042608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a2494aaabbbb1d3%3A0x1234abcd!2sIndia!5e0!3m2!1sen!2sin!4v1631259806391!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+                <h2>List of Hotspots</h2>
+                <ul class="list">
+                    <li class="list-item">
+                        <strong>Area 1:</strong> High crime rate, reported incidents.
+                    </li>
+                    <li class="list-item">
+                        <strong>Area 2:</strong> Poor lighting, known for harassment.
+                    </li>
+                    <!-- Add more list items as needed -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

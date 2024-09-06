@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOS Alerts</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 20px;
+            border-radius: 10px;
+            width: 120px;
+            background-image: linear-gradient(to right, #0004ff, #000000);
+            margin-bottom: 50px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            flex: 1;
+            margin-left: 220px; /* Space for the sidebar */
+            padding: 20px;
+        }
+
+        .header {
+            background-image: linear-gradient(to right, #0004ff, #ff4500); /* Orange to Red */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .table-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .table-container h2 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        .sos-gestures {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .sos-gestures h2 {
+            margin-bottom: 20px;
+        }
+
+        .gesture {
+            margin-bottom: 10px;
+        }
+
+        .gesture img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #0069d9;
+        }
+        .logOut {
+            color: #fff;
+            background-color: #ff4500; /* Red color */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: block;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .logOut {
+            color: #e03d00; /* Darker red for hover effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Women Safety</h2>
+            <ul>
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="Facesdetected.html">Faces Detected</a></li>
+                <li><a href="females.html">Females</a></li>
+                <li><a href="male.html">Male</a></li>
+                <li><a href="sneha.html">Lonely women</a></li>
+                <li><a href="sos.html">SOS</a></li>
+                <li><a href="alerts.html">Alerts</a></li>
+                <li><a href="hotspots.html">Hotspots</a></li>
+                <li><a href="#"class="logOut">Log Out</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="header">
+                <h1>SOS Alerts</h1>
+            </div>
+            
+            <div class="table-container">
+                <h2>Received SOS Alerts</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Phone Number</th>
+                            <th>Area</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jane Doe</td>
+                            <td>123-456-7890</td>
+                            <td>New York</td>
+                        </tr>
+                        <tr>
+                            <td>John Smith</td>
+                            <td>098-765-4321</td>
+                            <td>Los Angeles</td>
+                        </tr>
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="sos-gestures">
+                <h2>SOS Gestures</h2>
+                <div class="gesture">
+                    <h3>Gesture 1: Hand Raised</h3>
+                    <img src="https://www.shutterstock.com/image-illustration/hands-sign-you-can-show-260nw-2211050041.jpg" alt="Hand Raised Gesture">
+                    <p>This gesture is used when some is in Danger with their life.</p>
+                </div>
+                <div class="gesture">
+                    <h3>Gesture 2: Hand Wave</h3>
+                    <img src="gesture2.jpg" alt="Hand Wave Gesture">
+                    <p>Description of Gesture 2.</p>
+                </div>
+                <!-- Add more gestures as needed -->
+            </div>
+            
+            <a href="index.html" class="btn">Back to Dashboard</a>
+        </div>
+    </div>
+</body>
+</html>

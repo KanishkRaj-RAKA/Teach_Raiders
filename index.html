@@ -1,9 +1,258 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Image Display</title>
-  </head>
-  <body>
-    <img src="http://localhost:5000/image" alt="Image">
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Safety Dashboard</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 20px;
+            border-radius: 10px;
+            width: 120px;
+            
+            background-image: linear-gradient(to right, #0004ff, #000000);
+            margin-bottom: 50px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .header {
+            background-image: linear-gradient(to right, #0004ff, #ff4500); /* Orange to Red */
+            padding: 20px;
+            width: 1250px;
+            height: 20px;
+            margin-bottom: auto;
+            border-radius: 10px;
+            text-align: center; /* Center align the header text */
+            color: white; /* Use white text for better contrast */
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .header p {
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .grid {
+            display: grid;
+            margin-top: 20px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .card:hover {
+            background-color: #f9f9f9;
+            cursor: pointer;
+        }
+
+        .card i {
+            font-size: 48px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card h2 {
+            margin: 0;
+        }
+
+        .table-container {
+            background-color: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .table-container h2 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0069d9;
+        }
+        .logOut {
+    color: #fff;
+    background-color: #ff4500; /* Red color */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.logOut {
+    color: #e03d00; /* Darker red for hover effect */
+}
+
+    </style>
+</head>
+<body> 
+    <div class="container">
+        <div class="sidebar">
+            <h2>Women Safety</h2>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="Facesdetected.html">Faces Detacted</a></li>
+                <li><a href="#">Females</a></li>
+                <li><a href="males.html">Male</a></li>
+                <li><a href="alonewomen.html">Alone women
+                </a></li>
+                <li><a href="SOS.html">SOS</a></li>
+                <li><a href="Alerts.html">Alerts</a></li>
+                <li><a href="map.html">Hotspots</a></li>
+                <li><a href="#"class="logOut">Log Out</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="header">
+                <h1>Hi Welcome Debanjan</h1>
+            </div>
+            <div class="grid">
+                <a href="Facesdetected.html" class="card">
+                    <i class="fas fa-user"></i>
+                    <h2>4</h2>
+                    <p>Faces Detected</p>
+                </a>
+                <a href="females.html" class="card">
+                    <i class="fas fa-female"></i>
+                    <h2>2</h2>
+                    <p>Females</p>
+                </a>
+                <a href="males.html" class="card">
+                    <i class="fas fa-male"></i>
+                    <h2>2</h2>
+                    <p>Male</p>
+                </a>
+                <a href="alonewomen.html" class="card">
+                    <i class="fas fa-file-alt"></i>
+                    <h2>Loading...</h2>
+                    <p>Alone women</p>
+                </a>
+                <a href="sos.html" class="card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h2>2</h2>
+                    <p>SOS</p>
+                </a>
+                <a href="alerts.html" class="card">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <h2>5</h2>
+                    <p>Alerts</p>
+                </a>
+                <a href="map.html" class="card">
+                    <i class="fas fa-skull-crossbones"></i>
+                    <h2>2</h2>
+                    <p>Hotspots</p>
+                </a>
+            </div>
+            <div class="table-container">
+                <h2>SOS Alert</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Address</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>alice</td>
+                            <td>123 Wonderland Ave</td>
+                            <td> <a href="SOS.html"><button class="btn">View</button></a> 
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
 </html>

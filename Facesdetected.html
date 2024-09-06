@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faces Detected</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+        }
+
+        .container {
+            display: flex;
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            height: 100vh; /* Make sidebar full height */
+            position: fixed; /* Fixed sidebar */
+        }
+
+        .sidebar h2 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            padding: 20px;
+            border-radius: 10px;
+            width: 120px;
+            background-image: linear-gradient(to right, #0004ff, #000000);
+            margin-bottom: 50px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+
+        .sidebar a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .content {
+            flex: 1;
+            padding: 20px;
+            margin-left: 220px; /* Margin to the right of the sidebar */
+        }
+
+        .header {
+            background-image: linear-gradient(to right, #0004ff, #ff4500); /* Orange to Red */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .header p {
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .table-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .table-container h2 {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f0f0f0;
+        }
+
+        img {
+            width: 100px;
+            height: 75px; /* Adjust height for a rectangular shape */
+            object-fit: cover; /* Ensures image covers the area without distortion */
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+        }
+        .logOut {
+            color: #fff;
+            background-color: #ff4500; /* Red color */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: block;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+        .logOut {
+            color: #e03d00; /* Darker red for hover effect */
+}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Women Safety</h2>
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="Facesdetected.html">Faces Detected</a></li>
+            <li><a href="females.html">Females</a></li>
+            <li><a href="male.html">Male</a></li>
+            <li><a href="sneha.html">Alone womens</a></li>
+            <li><a href="sos.html">SOS</a></li>
+            <li><a href="alerts.html">Alerts</a></li>
+            <li><a href="map.html">Hotspots</a></li>
+            <li><a href="logout.html"class="logOut">Log Out</a></li>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="header">
+            <h1>Faces Detected</h1>
+        </div>
+        
+        <div class="table-container">
+            <h2>Detected Individuals</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Image</th>
+                        <th>ID</th>
+                        <th>Gender</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="image1.jpg" alt="Person 1"></td>
+                        <td>1</td>
+                        <td>Female</td>
+                    </tr>
+                    <tr>
+                        <td><img src="image2.jpg" alt="Person 2"></td>
+                        <td>2</td>
+                        <td>Female</td>
+                    </tr>
+                    <tr>
+                        <td><img src="image3.jpg" alt="Person 3"></td>
+                        <td>3</td>
+                        <td>Male</td>
+                    </tr>
+                    <tr>
+                        <td><img src="image4.jpg" alt="Person 4"></td>
+                        <td>4</td>
+                        <td>Male</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
